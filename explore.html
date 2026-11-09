@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLANIGO - Jelajah & Planner</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/explore.css">
+    <!-- Google Fonts untuk Tipografi Modern -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo-container">
+            <h2>Planigo</h2>
+            <span>Plan Your Trip, Ready To Go</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="#" class="active">Jelajah</a></li>
+            <li><a href="my-itinerary.html">Itinerarymu</a></li>
+            <li><a href="akun-pengguna.html">
+                    <div class="nav-avatar-img">SK</div>
+                </a>
+            </li>
+        </ul>
+       
+    </header>
+
+    <!-- TAMPILAN KATALOG UTAMA (DISCOVERY) -->
+    <div id="discoveryView">
+        <main class="explore-container">
+            <!-- Header Judul -->
+            <div class="discovery-header">
+                <h2>Rekomendasi untuk Kamu</h2>
+                <p>Cari destinasi, kuliner, serta penginapan favoritmu untuk dimasukkan ke dalam itinerary</p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-box-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Cari kota, destinasi, kuliner, serta penginapan...">
+            </div>
+
+            <!-- Category Pills dengan Ikon -->
+            <div class="category-pills">
+                <button class="pill-btn active" data-category="populer"><span class="pill-icon bg-yellow">⭐</span> Populer</button>
+                <button class="pill-btn" data-category="destinasi"><span class="pill-icon bg-purple">🎡</span> Destinasi</button>
+                <button class="pill-btn" data-category="kuliner"><span class="pill-icon bg-purple">🍽️</span> Kuliner</button>
+                <button class="pill-btn" data-category="penginapan"><span class="pill-icon bg-green">🏨</span> Penginapan</button>
+                <button class="pill-btn" data-category="transportasi"><span class="pill-icon bg-red">🚗</span> Transportasi</button>
+            </div>
+
+            <!-- Section Title -->
+            <h3 class="section-heading">Destinasi Populer di Malang</h3>
+
+<!-- Grid Cards -->
+            <div class="destinations-grid">
+                <!-- Card 1 -->
+                <div class="dest-card" data-category="destinasi">
+                    <div class="dest-img-container">
+                        <img src="Mikutopia.jpeg" alt="Mikutopia" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Mikutopia</h4>
+                        <p class="dest-location">📍 Batu, Malang</p>
+                        <div class="dest-tags">
+                            <span class="tag">Akses Disabilitas</span>
+                            <span class="tag">Musholla</span>
+                            <span class="tag">Food Court</span>
+                            <span class="tag">Toilet Umum</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Rp 40.000-50.000</span>
+                        </div>
+                    <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                    <a href="destinasi-details.html#mikutopia" class="btn-detail-full">
+                    Lihat Detail
+                    </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="dest-card" data-category="destinasi populer">
+                    <div class="dest-img-container">
+                        <img src="Raja Ampat.jpg.jpeg" alt="Raja Ampat" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Raja Ampat</h4>
+                        <p class="dest-location">📍 Papua Barat Daya</p>
+                        <div class="dest-tags">
+                            <span class="tag">Tour Guide</span>
+                            <span class="tag">Alat Snorkling</span>
+                            <span class="tag">Homestay</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Rp 500.000-1.000.000</span>
+                        </div>
+                    <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                    <a href="destinasi-details.html#raja-ampat" class="btn-detail-full">
+                    Lihat Detail
+                    </a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="dest-card" data-category="penginapan">
+                    <div class="dest-img-container">
+                        <img src="Padma Resort Ubud.avif" alt="Padma Resort Ubud" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Padma Resort Ubud</h4>
+                        <p class="dest-location">📍 Bali</p>
+                        <div class="dest-tags">
+                            <span class="tag">Pool Cafe & Bar</span>
+                            <span class="tag">Room Service 24 Jam</span>
+                            <span class="tag">Spot Foto</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Mulai dari Rp 3.800.000</span>
+                        </div>
+                    <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                    <a href="destinasi-details.html#padma-resort-ubud" class="btn-detail-full">
+                    Lihat Detail
+                    </a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="dest-card" data-category="kuliner">
+                    <div class="dest-img-container">
+                        <img src="Gudeg Yu Djum 3.jpg" alt="Gudeg Yu Djum" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Gudeg Yu Djum</h4>
+                        <p class="dest-location">📍 Yogyakarta</p>
+                        <div class="dest-tags">
+                            <span class="tag">Indoor & Outdoor</span>
+                            <span class="tag">Toilet Umum</span>
+                            <span class="tag">Paket Besek Hampers</span>
+                            <span class="tag">Parkir</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Mulai dari Rp 20.000</span>
+                        </div>
+                    <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                    <a href="destinasi-details.html#gudeg-yu-djum" class="btn-detail-full">
+                    Lihat Detail
+                    </a>
+                    </div>
+                </div>
+   
+                <!-- Card 5 -->
+                <div class="dest-card" data-category="kuliner">
+                    <div class="dest-img-container">
+                        <img src="Bebek Sinjay 1.jpg" alt="Bebek Sinjay" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Bebek Sinjay</h4>
+                        <p class="dest-location">📍 Madura</p>
+                        <div class="dest-tags">
+                            <span class="tag">Area Makan luas</span>
+                            <span class="tag">Musholla</span>
+                            <span class="tag">Toilet</span>
+                            <span class="tag">Pemesanan Terorganisir</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Rp 30.000</span>
+                        </div>
+                    <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                    <a href="destinasi-details.html#bebek-sinjay" class="btn-detail-full">
+                    Lihat Detail
+                    </a>
+                    </div>
+                </div>
+
+             <!-- Card 6 -->
+                <div class="dest-card" data-category="destinasi">
+                    <div class="dest-img-container">
+                        <img src="Tumpak Sewu.webp" alt="Tumpak Sewu" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Tumpak Sewu</h4>
+                        <p class="dest-location">📍 Malang</p>
+                        <div class="dest-tags">
+                            <span class="tag">Area Parkir</span>
+                            <span class="tag">Musholla</span>
+                            <span class="tag">Pos Istirahat</span>
+                            <span class="tag">Warung Makan</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Rp 21.250</span>
+                        </div>
+                        <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                <button class="btn-detail-full" onclick="openModal('Tumpak Sewu', 'Air Terjun Tumpak Sewu (dikenal juga sebagai Coban Sewu) sering dijuluki sebagai Niagara-nya Indonesia. Terletak di perbatasan Kabupaten Lumajang dan Kabupaten Malang, tempat ini menyajikan aliran air terjun berbentuk melebar melingkar yang keluar dari dinding tebing tinggi berlatar Gunung Semeru. Wisatawan dapat menikmati keindahannya dari dua sudut yaitu dari, Pos Panorama Atas untuk melihat kemegahan tirai air dari gardu pandang, atau melakoni trekking petualangan menyusuri tangga tebing dan aliran sungai menuju Dasar Lembah Air Terjun serta kawasan Goa Tetes.')">
+                    Lihat Detail Destinasi
+                </button>
+                    </div>
+                </div>
+                
+                <!-- ========================================================= -->
+                <!-- STRUKTUR POP-UP (MODAL) DITAMBAHKAN DI BAWAH GRID CARD -->
+                <!-- ========================================================= -->
+                <div id="detailModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <h3 id="modalTitle">Judul Destinasi</h3>
+                        <hr style="margin: 12px 0; border: none; border-top: 1px solid #eee;">
+                        <p id="modalDescription">Deskripsi atau sejarah destinasi akan muncul di sini.</p>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="dest-card" data-category="destinasi">
+                    <div class="dest-img-container">
+                        <img src="Garuda Wisnu Kencana.jpg.jpeg" alt="Garuda Wisnu Kencana" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Garuda Wisnu Kencana</h4>
+                        <p class="dest-location">📍 Bali</p>
+                        <div class="dest-tags">
+                            <span class="tag">Jalur Disabilitas</span>
+                            <span class="tag">Toko Souvenir</span>
+                            <span class="tag">Garuda Cinema</span>
+                            <span class="tag">Amphitheater</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Rp 150.000</span>
+                        </div>
+                        <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                <button class="btn-detail-full" onclick="openModal('Garuda Wisnu Kencana', 'Garuda Wisnu Kencana adalah taman budaya seluas 60 hektar di Bukit Ungasan, Kuta Selatan, Bali. Ikon utamanya adalah patung megah Dewa Wisnu yang menunggangi burung sakral Garuda karya I Nyoman Nuarta, yang berdiri setinggi 121 meter (lebih tinggi dari Patung Liberty) dan menjadi salah satu patung tembaga-kuningan terbesar di dunia. Kawasan ini dikelilingi lorong-lorong tebing kapur raksasa bernuansa artistik yang sering menjadi tempat acara internasional. Selain menikmati arsitektur dan panorama pulau Bali dari ketinggian, pengunjung bisa menonton pementasan seni tari Bali harian gratis serta film animasi edukatif di bioskop mini.')">
+                    Lihat Detail Destinasi
+                </button>
+                    </div>
+                </div>
+                
+                <!-- ========================================================= -->
+                <!-- STRUKTUR POP-UP (MODAL) DITAMBAHKAN DI BAWAH GRID CARD -->
+                <!-- ========================================================= -->
+                <div id="detailModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <h3 id="modalTitle">Judul Destinasi</h3>
+                        <hr style="margin: 12px 0; border: none; border-top: 1px solid #eee;">
+                        <p id="modalDescription">Deskripsi atau sejarah destinasi akan muncul di sini.</p>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="dest-card" data-category="transportasi">
+                    <div class="dest-img-container">
+                        <img src="Sunday Motorent.png" alt="Sunday Motorent" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Sunday Motorent</h4>
+                        <p class="dest-location">📍 Kota Malang</p>
+                        <div class="dest-tags">
+                            <span class="tag">2 Helm SNI</span>
+                            <span class="tag">Jas Hujan</span>
+                            <span class="tag">Layanan Antar-Jemput</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Mulai dari Rp 80.000/jam</span>
+                        </div>
+                    <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                    <a href="destinasi-details.html#sunday-motorent" class="btn-detail-full">
+                    Lihat Detail
+                    </a>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="dest-card" data-category="destinasi populer">
+                    <div class="dest-img-container">
+                        <img src="labuan bajo.webp" alt="Labuan Bajo" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Labuan Bajo</h4>
+                        <p class="dest-location">📍 Manggarai Barat, NTT</p>
+                        <div class="dest-tags">
+                            <span class="tag">Phinisi Tour</span>
+                            <span class="tag">Cafe & Restaurant</span>
+                            <span class="tag">Resort</span>
+                            <span class="tag">Spot Foto</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Rp 5.000-100.000</span>
+                        </div>
+                        <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                            <a href="destinasi-details.html#labuan-bajo" class="btn-detail-full">
+                            Lihat Detail
+                            </a>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="dest-card" data-category="destinasi populer">
+                    <div class="dest-img-container">
+                        <img src="kawah ijen.jfif" alt="Kawah Ijen" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Kawah Ijen</h4>
+                        <p class="dest-location">📍 Bondowoso & Banyuwangi, Jawa Timur</p>
+                        <div class="dest-tags">
+                            <span class="tag">Hiking</span>
+                            <span class="tag">Porter</span>
+                            <span class="tag">Tour Guide</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Rp 20.000-30.000</span>
+                        </div>
+                        <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                            <a href="destinasi-details.html#kawah-ijen" class="btn-detail-full">
+                            Lihat Detail
+                            </a>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="dest-card" data-category="destinasi">
+                    <div class="dest-img-container">
+                        <img src="museum dirgantara.jpg" alt="Museum Dirgantara Mandala" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Museum Dirgantara Mandala</h4>
+                        <p class="dest-location">📍 Sleman, Yogyakarta</p>
+                        <div class="dest-tags">
+                            <span class="tag">Minitheater</span>
+                            <span class="tag">Musholla</span>
+                            <span class="tag">Tour Guide</span>
+                            <span class="tag">Rest Area</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Rp 6.000-10.000</span>
+                        </div>
+                        <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                <button class="btn-detail-full" onclick="openModal('Museum Dirgantara Mandala', 'Museum Dirgantara yang terletak di kompleks Lanud Adisutjipto, Yogyakarta, adalah tujuan menarik bagi penggemar kedirgantaraan dan sejarah penerbangan di Indonesia. Di sini, pengunjung dapat menyaksikan kisah sukses dan pencapaian gemilang dalam bidang dirgantara Indonesia melalui koleksi pesawat bersejarah, peralatan militer, dan barang-barang penting lainnya.')">
+                    Lihat Detail Destinasi
+                </button>
+                    </div>
+                </div>
+                
+                <!-- ========================================================= -->
+                <!-- STRUKTUR POP-UP (MODAL) DITAMBAHKAN DI BAWAH GRID CARD -->
+                <!-- ========================================================= -->
+                <div id="detailModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <h3 id="modalTitle">Judul Destinasi</h3>
+                        <hr style="margin: 12px 0; border: none; border-top: 1px solid #eee;">
+                        <p id="modalDescription">Deskripsi atau sejarah destinasi akan muncul di sini.</p>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="dest-card" data-category="destinasi populer">
+                    <div class="dest-img-container">
+                        <img src="candi prambanan.jpg" alt="Candi Prambanan" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Candi Prambanan</h4>
+                        <p class="dest-location">📍 Sleman, Yogyakarta</p>
+                        <div class="dest-tags">
+                            <span class="tag">Area Parkir</span>
+                            <span class="tag">Musholla</span>
+                            <span class="tag">Tour Guide</span>
+                            <span class="tag">Rest Area</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Rp 25.000-100.000</span>
+                        </div>
+                        <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                            <a href="destinasi-details.html#candi-prambanan" class="btn-detail-full">
+                            Lihat Detail
+                            </a>
+                    </div>
+                </div>
+
+                <!-- Card 13 -->
+                <div class="dest-card" data-category="penginapan">
+                    <div class="dest-img-container">
+                        <img src="hotel amanjiwo.webp" alt="Amanjiwo Resort and Hotel" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Amanjiwo Resort and Hotel</h4>
+                        <p class="dest-location">📍 Magelang, Jawa Tengah</p>
+                        <div class="dest-tags">
+                            <span class="tag">Bar & Restaurant</span>
+                            <span class="tag">Swimming Pool</span>
+                            <span class="tag">Art Gallery</span>
+                            <span class="tag">Spa & Wellness</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Mulai Rp 23.000.000</span>
+                        </div>
+                    <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                    <a href="destinasi-details.html#amanjiwo-resort" class="btn-detail-full">
+                    Lihat Detail
+                    </a>
+              </div>
+         </div>
+
+            <!-- Card 14 -->
+                <div class="dest-card" data-category="destinasi populer">
+                    <div class="dest-img-container">
+                        <img src="gunung rinjani.jpg" alt="Taman Nasional Gunung Rinjani" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Taman Nasional Gunung Rinjani</h4>
+                        <p class="dest-location">📍 Lombok, NTB</p>
+                        <div class="dest-tags">
+                            <span class="tag">Hiking</span>
+                            <span class="tag">Porter</span>
+                            <span class="tag">Spot Foto</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Rp 50.000 - 250.000</span>
+                        </div>
+                        <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                            <a href="destinasi-details.html#gunung-rinjani" class="btn-detail-full">
+                            Lihat Detail
+                            </a>
+                    </div>
+                </div>
+
+            <!-- Card 15 -->
+                <div class="dest-card" data-category="destinasi populer">
+                    <div class="dest-img-container">
+                        <img src="danau toba.jpg" alt="Danau Toba" class="dest-img">
+                    </div>
+                    <div class="dest-body">
+                        <h4 class="dest-title">Danau Toba</h4>
+                        <p class="dest-location">📍 Samosir, Sumatera Utara</p>
+                        <div class="dest-tags">
+                            <span class="tag">Hotel & Resort</span>
+                            <span class="tag">Camping Ground</span>
+                            <span class="tag">Spot Foto</span>
+                        </div>
+                        <div class="dest-bottom">
+                            <span class="dest-price">Rp 25.000 - 50.000</span>
+                        </div>
+                        <!-- TOMBOL DETAIL PANJANG DI BAWAH HARGA -->
+                            <a href="destinasi-details.html#danau-toba" class="btn-detail-full">
+                            Lihat Detail
+                            </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner Belum Tahu Mau ke Mana -->
+            <div class="info-banner">
+                <div class="info-icon-circle">💡</div>
+                <div class="info-text">
+                    <strong>Belum tau mau ke mana?</strong>
+                    <p>Gunakan kategori atau pencarian untuk menemukan destinasi yang sesuai denganmu.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Tombol Floating -->
+        <button id="btnStartPlanner" class="btn-floating">Lanjut: Data diri ➔</button>
+    </div>
+
+    <!-- TAMPILAN STEPPER FORM (6 TAHAPAN) -->
+    <div id="plannerStepView" style="display: none;">
+        <!-- Stepper Progress Bar -->
+        <div class="stepper-container">
+            <div class="step-item active" data-step="1"><span class="step-num">1</span><div class="step-label"><strong>Detail Trip</strong><small>Data Diri</small></div></div>
+            <div class="step-item" data-step="2"><span class="step-num">2</span><div class="step-label"><strong>Destinasi</strong><small>Wisata</small></div></div>
+            <div class="step-item" data-step="3"><span class="step-num">3</span><div class="step-label"><strong>Akomodasi</strong><small>Penginapan</small></div></div>
+            <div class="step-item" data-step="4"><span class="step-num">4</span><div class="step-label"><strong>Kuliner</strong><small>Resto & Cafe</small></div></div>
+            <div class="step-item" data-step="5"><span class="step-num">5</span><div class="step-label"><strong>Mobilitas</strong><small>Transportasi</small></div></div>
+            <div class="step-item" data-step="6"><span class="step-num">6</span><div class="step-label"><strong>Itinerary</strong><small>Ringkasan</small></div></div>
+        </div>
+
+        <main class="explore-container">
+          <!-- STEP 1: DETAIL TRIP -->
+<div id="stepContent1" class="step-content active">
+    <!-- Header Step Konsisten -->
+    <div class="step-header-text">
+        <h2 class="main-step-title">📋 Lengkapi Detail Perjalananmu</h2>
+        <p class="sub-step-title">Isi data dasar di bawah ini untuk membantu kami menyusun estimasi itinerary & anggaran terbaik.</p>
+    </div>
+
+    <!-- Container Form Card Modern -->
+    <div class="form-card-wrapper">
+        <form class="modern-form-grid">
+           
+            <!-- Group 1: Informasi Dasar -->
+            <div class="form-section-block">
+                <h4 class="form-block-title">👤 Data Pemesan & Destinasi</h4>
+               
+                <div class="form-group-custom">
+                    <label for="inputName">Nama Pemesan</label>
+                    <div class="input-with-icon">
+                        <span class="field-icon">👤</span>
+                        <input type="text" id="inputName" placeholder="Masukkan nama lengkap kamu">
+                    </div>
+                </div>
+
+                <div class="form-group-custom">
+                    <label for="inputCity">Kota Tujuan Utama</label>
+                    <div class="input-with-icon">
+                        <span class="field-icon">📍</span>
+                        <select id="inputCity">
+                            <option value="Malang">Malang, Jawa Timur</option>
+                            <option value="Yogyakarta">Yogyakarta, D.I.Y</option>
+                            <option value="Bali">Denpasar, Bali</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group 2: Waktu & Anggaran -->
+            <div class="form-section-block">
+                <h4 class="form-block-title">🗓️ Jadwal & Estimasi Budget</h4>
+               
+                <div class="form-row-2col">
+                    <div class="form-group-custom">
+                        <label for="startDate">Tanggal Mulai</label>
+                        <div class="input-with-icon">
+                            <span class="field-icon">📅</span>
+                            <input type="date" id="startDate">
+                        </div>
+                    </div>
+
+                    <div class="form-group-custom">
+                        <label for="inputDays">Durasi (Hari)</label>
+                        <div class="input-with-icon">
+                            <span class="field-icon">⏳</span>
+                            <input type="number" id="inputDays" value="2" min="1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row-2col">
+                    <div class="form-group-custom">
+                        <label for="inputPersons">Jumlah Peserta</label>
+                        <div class="input-with-icon">
+                            <span class="field-icon">👨‍👩‍👧‍👦</span>
+                            <input type="number" id="inputPersons" value="2" min="1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+            <!-- STEP 2: DESTINASI WISATA -->
+           <!-- STEP 2: DESTINASI WISATA -->
+<div id="stepContent2" class="step-content">
+    <div class="step-header-text">
+        <h2 class="main-step-title">Eksplorasi Destinasi Wisata</h2>
+        <p class="sub-step-title">Pilihan Destinasi Wisata di Malang</p>
+    </div>
+
+    <!-- Search Bar -->
+            <div class="search-box-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Cari destinasi wisata...">
+            </div>
+
+    <!-- Category Pills untuk Filter -->
+    <div class="category-pills">
+                <button class="pill-btn active" data-category="populer"><span class="pill-icon bg-yellow">⭐</span> Populer</button>
+                <button class="pill-btn" data-category="budaya"><span class="pill-icon bg-purple">🏛️</span> Budaya</button>
+                <button class="pill-btn" data-category="alam"><span class="pill-icon bg-green">🌄</span> Alam</button>
+                <button class="pill-btn" data-category="wahana"><span class="pill-icon bg-pink">🎡</span> Wahana</button>
+            </div>
+
+
+            <!-- Section Title -->
+            <h3 class="section-heading" id="section-title">Destinasi Populer di Malang</h3>
+
+ <!-- Grid Card Wisata -->
+    <div class="destinations-grid">
+        <!-- Card 1 -->
+        <div class="dest-card" data-category="wahana">
+            <div class="dest-img-container">
+                <img src="Jatim Park 1.jpeg" alt="Jatim Park 1" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Jatim Park 1</h4>
+                <p class="dest-location">📍 Batu</p>
+                <div class="dest-tags">
+                    <span class="tag">Akses Disabilitas</span>
+                    <span class="tag">Musholla</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 50.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Jatim Park 1" data-price="50000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Card 2 -->
+        <div class="dest-card" data-category="alam populer">
+            <div class="dest-img-container">
+                <img src="bromo.jpeg" alt="Bromo" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Bromo</h4>
+                <p class="dest-location">📍 Cemoro Lawang</p>
+                <div class="dest-tags">
+                    <span class="tag">Parkir Luas</span>
+                    <span class="tag">Spot Foto</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 320.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Bromo" data-price="320000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Card 3 -->
+        <div class="dest-card" data-category="alam">
+            <div class="dest-img-container">
+                <img src="coban rondo.jpg.jpeg" alt="Coban Rondo" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Coban Rondo</h4>
+                <p class="dest-location">📍 Desa Pandesari</p>
+                <div class="dest-tags">
+                    <span class="tag">Akses Disabilitas</span>
+                    <span class="tag">Musholla</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 18.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Coban Rondo" data-price="18000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Card 4 -->
+        <div class="dest-card" data-category="wahana">
+            <div class="dest-img-container">
+                <img src="san terra.webp" alt="Flora Wisata San Terra" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Flora Wisata San Terra</h4>
+                <p class="dest-location">📍 Batu</p>
+                <div class="dest-tags">
+                    <span class="tag">Parkir Luas</span>
+                    <span class="tag">Spot Foto</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 25.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Flora Wisata San Terra" data-price="25000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Card 5 -->
+        <div class="dest-card" data-category="budaya">
+            <div class="dest-img-container">
+                <img src="Candi badut.webp" alt="Candi Prambanan" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Candi Badut</h4>
+                <p class="dest-location">📍 Desa Karangwidoro</p>
+                <div class="dest-tags">
+                    <span class="tag">Akses Disabilitas</span>
+                    <span class="tag">Musholla</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 50.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Candi Prambanan" data-price="50000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Card 6 -->
+        <div class="dest-card" data-category="alam">
+            <div class="dest-img-container">
+                <img src="Kebun Teh.webp" alt="Kebun Teh Wonosari" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Kebun Teh Wonosari</h4>
+                <p class="dest-location">📍 Lawang</p>
+                <div class="dest-tags">
+                    <span class="tag">Spot Foto</span>
+                    <span class="tag">Udara Sejuk</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 20.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Kebun Teh Wonosari" data-price="20000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Card 7 -->
+        <div class="dest-card" data-category="wahana">
+            <div class="dest-img-container">
+                <img src="Mikutopia.jpeg" alt="Taman Sari Yogyakarta" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Mikutopia</h4>
+                <p class="dest-location">📍 Batu</p>
+                <div class="dest-tags">
+                    <span class="tag">Spot Foto</span>
+                    <span class="tag">Sejarah</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 15.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Taman Sari Yogyakarta" data-price="15000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Card 8 -->
+        <div class="dest-card" data-category="alam">
+            <div class="dest-img-container">
+                <img src="teluk asmara beach.jfif" alt="Teluk Asmara Beach" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Teluk Asmara</h4>
+                <p class="dest-location">📍 Sumbermanjing Wetan</p>
+                <div class="dest-tags">
+                    <span class="tag">Spot Foto</span>
+                    <span class="tag">Udara Sejuk</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 15.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Teluk Asmara Beach" data-price="20000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Card 9 -->
+        <div class="dest-card" data-category="budaya">
+            <div class="dest-img-container">
+                <img src="kampung budaya polowijen.jfif" alt="Kampung Budaya Polowijen" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Kampung Budaya Polowijen</h4>
+                <p class="dest-location">📍 Blimbing</p>
+                <div class="dest-tags">
+                    <span class="tag">Spot Foto</span>
+                    <span class="tag">Sejarah</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 25.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Kampung Budaya Polowijen" data-price="20000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Card 10 -->
+        <div class="dest-card" data-category="alam">
+            <div class="dest-img-container">
+                <img src="pantai balekambang.jpg" alt="Kampung Budaya Polowijen" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Pantai Balekambang</h4>
+                <p class="dest-location">📍 Desa Srigonco, Kecamatan Bantur, Kabupaten Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Spot Foto</span>
+                    <span class="tag">Udara Sejuk</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 20.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Kampung Budaya Polowijen" data-price="20000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+       
+        <!-- Card 11 -->
+        <div class="dest-card" data-category="populer">
+            <div class="dest-img-container">
+                <img src="kajoetangan.jpg" alt="Kajoetangan Heritage" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Kajoetangan</h4>
+                <p class="dest-location">📍 Kauman, Kec. Klojen</p>
+                <div class="dest-tags">
+                    <span class="tag">Spot Foto</span>
+                    <span class="tag">Kuliner</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 5.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Kampung Budaya Polowijen" data-price="20000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+       
+        <!-- Card 12 -->
+        <div class="dest-card" data-category="populer wahana">
+            <div class="dest-img-container">
+                <img src="BNS.jpg" alt="Batu Night Spectacular (BNS)" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Batu Night Spectacular (BNS)</h4>
+                <p class="dest-location">📍 Kota Batu</p>
+                <div class="dest-tags">
+                    <span class="tag">Wahan Permainan</span>
+                    <span class="tag">Lampion Garden</span>
+                    <span class="tag">Wisata Malam</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Mulai Rp 45.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Batu Night Spectacular (BNS)" data-price="45.000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Card 13 -->
+        <div class="dest-card" data-category="populer pantai">
+            <div class="dest-img-container">
+                <img src="batu bengkung.jpg" alt="Batu Bengkung" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Pantai Batu Bengkung</h4>
+                <p class="dest-location">📍 Kabupaten Malang</p>
+                <div class="dest-tags">
+                    <span class="tag"> Pemandangan Alam </span>
+                    <span class="tag"> Spot Foto </span>
+                    <span class="tag"> Wisata Alam</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp10.000 – Rp13.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Pantai Batu Bengkung" data-price="10.000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+         <!-- Card 14 -->
+        <div class="dest-card" data-category="budaya">
+            <div class="dest-img-container">
+                <img src="museum brawijaya.png" alt="Museum Brawijaya" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Museum Brawijaya</h4>
+                <p class="dest-location">📍 Kota Malang</p>
+                <div class="dest-tags">
+                    <span class="tag"> Wisata Sejarah  </span>
+                    <span class="tag"> Edukasi  </span>
+                    <span class="tag"> Koleksi Militer </span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Mulai rp 3.000</span>
+                    <button class="btn-select" data-type="dest" data-name="Pantai Batu Bengkung" data-price="3.000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+         <!-- Card 15 -->
+        <div class="dest-card" data-category="budaya">
+            <div class="dest-img-container">
+                <img src="Candi Singosari.jpeg" alt="Candi Singosari" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Candi Singosari </h4>
+                <p class="dest-location">📍 Kabupaten Malang</p>
+                <div class="dest-tags">
+                    <span class="tag"> Wisata Sejarah  </span>
+                    <span class="tag"> Edukasi Budaya </span>
+                    <span class="tag"> Peninggalan Kerajaan </span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Gratis</span>
+                    <button class="btn-select" data-type="dest" data-name="Candi Singosari  " data-price="0">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+     
+    </div>
+</div>
+
+<!-- STEP 3: AKOMODASI / PENGINAPAN -->
+<div id="stepContent3" class="step-content">
+    <!-- Header Step -->
+    <div class="step-header-text">
+        <h2 class="main-step-title">Pilih Hotel untuk Menginap</h2>
+        <p class="sub-step-title">Cari dan pilih hotel yang sesuai dengan kebutuhan dan budget perjalananmu.</p>
+    </div>
+
+    <!-- FILTER PANEL AKOMODASI -->
+    <div class="filter-panel-card">
+        <!-- Baris Atas Filter -->
+        <div class="filter-top-row">
+            <!-- Kota Tujuan -->
+            <div class="filter-group">
+                <label>Kota Tujuan</label>
+                <div class="select-wrapper">
+                    <span class="input-icon">📍</span>
+                    <select id="filterCity">
+                        <option value="Malang">Malang</option>
+                        <option value="Yogyakarta">Yogyakarta</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Jenis Akomodasi -->
+            <div class="filter-group">
+                <label>Jenis Akomodasi</label>
+                <div class="type-icon-group">
+                    <button class="type-btn active"data-category="hotel"><span class="type-icon">🏢</span> Hotel</button>
+                    <button class="type-btn" data-category="hostel"><span class="type-icon">🛏️</span> Hostel</button>
+                    <button class="type-btn" data-category="homestay"><span class="type-icon">🏡</span> Homestay</button>
+                    <button class="type-btn" data-category="villa"><span class="type-icon">🏡</span> Villa</button>
+                    <button class="type-btn" data-category="kos"><span class="type-icon">🏠</span> Kos</button>
+                </div>
+            </div>
+
+            <!-- Rating Hotel -->
+            <div class="filter-group">
+                <label>Rating Hotel</label>
+                <div class="rating-btn-group">
+                    <button class="star-btn active" data-rating="all">★ Semua</button>
+                    <button class="star-btn" data-rating="1">1★</button>
+                    <button class="star-btn" data-rating="2">2★</button>
+                    <button class="star-btn" data-rating="3">3★</button>
+                    <button class="star-btn" data-rating="4">4★</button>
+                    <button class="star-btn" data-rating="5">5★</button>
+                </div>
+            </div>
+
+<!-- Rentang Harga (Menggunakan Dropdown) -->
+<div class="filter-group">
+    <label>Rentang Harga (Per Malam)</label>
+    <div class="select-wrapper">
+        <span class="input-icon">💰</span>
+        <select id="filterPrice">
+            <option value="all">Semua Budget</option>
+            <option data-price="0-100000" value="0-100000">&lt; Rp 100.000</option>
+            <option data-price="100000-300000" value="100000-300000">Rp 100.000 - Rp 300.000</option>
+            <option data-price="300000-500000" value="300000-500000">Rp 300.000 - Rp 500.000</option>
+            <option data-price="500000-700000" value="500000-700000">Rp 500.000 - Rp 700.000</option>
+            <option data-price="700000-1000000" value="700000-1000000">Rp 700.000 - Rp 1.000.000</option>
+            <option data-price="1000000-999999999" value="1000000-999999999">&gt; Rp 1.000.000</option>
+        </select>
+    </div>
+</div>
+        </div>
+
+        <!-- Baris Bawah Filter (Fasilitas & Urutkan) -->
+        <div class="filter-bottom-row">
+            <div class="facilities-group">
+                <span class="facilities-label">Fasilitas:</span>
+                <label class="checkbox-label" data-facilities="kolam-renang"><input type="checkbox" value="kolam-renang"> 🏊 Kolam Renang</label>
+                <label class="checkbox-label" data-facilities="wi-fi"><input type="checkbox" value="wi-fi"> 📶 Wi-Fi</label>
+                <label class="checkbox-label" data-facilities="sarapan"><input type="checkbox" value="sarapan"> 🍳 Sarapan</label>
+                <label class="checkbox-label" data-facilities="parkir"><input type="checkbox" value="parkir"> 🅿️ Parkir</label>
+                <label class="checkbox-label" data-facilities="ac"><input type="checkbox" value="ac"> ❄️ AC</label>
+                <label class="checkbox-label" data-facilities="disabilitas"><input type="checkbox" value="disabilitas"> 🧑‍🦽 Akses Disabilitas</label>
+                <label class="checkbox-label" data-facilities="resepsionis-24-jam"><input type="checkbox" value="resepsionis-24-jam"> 🛎️ Resepsionis 24 Jam</label>
+            </div>
+
+            <div class="sort-group">
+                <label>🔀 Urutkan:</label>
+                <select id="sortSelect">
+                    <option value="rekomendasi">Rekomendasi</option>
+                    <option value="terendah">Harga Terendah</option>
+                    <option value="tertinggi">Harga Tertinggi</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- GRID CARD HOTEL -->
+    <div class="destinations-grid">
+        <!-- Card 1 -->
+        <div class="dest-card" data-category="hotel" data-facilities="kolam-renang wi-fi sarapan parkir ac resepsionis-24-jam disabilitas" data-rating="5" data-price="300000-500000">
+            <div class="dest-img-container">
+                <img src="Harris Hotel.jpg" alt="Harris Hotel" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Harris Hotel & Conventions</h4>
+                <p class="dest-location">📍 Jl Riverside Blok C No. 1, Blimbing, Kota Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Kolam Renang</span>
+                    <span class="tag">Free Wi-Fi</span>
+                    <span class="tag">Fitness center</span>
+                    <span class="tag">Kid's club</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 450.000 <small style="font-size: 0.7rem; color: #64748b;">/malam</small></span>
+                    <button class="btn-select select" data-type="hotel" data-name="Harris Hotel & Conventions" data-price="450000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="dest-card" data-category="hotel" data-facilities="kolam-renang wi-fi sarapan parkir ac resepsionis-24-jam disabilitas" data-rating="5" data-price="700000-1000000">
+            <div class="dest-img-container">
+                <img src="Grand Mercure.jpg" alt="Grand Mercure Malang Nirmana" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Grand Mercure Malang Nirmana</h4>
+                <p class="dest-location">📍 Jl Raden Panji Suroso No 7, Kec. Blimbing, Kota Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Akses Disabilitas</span>
+                    <span class="tag">Mini bar</span>
+                    <span class="tag">Kolam renang</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 880.000</span>
+                    <button class="btn-select select" data-type="hotel" data-name="Mikutopia" data-price="50000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="dest-card" data-category="hotel" data-facilities="wi-fi parkir ac" data-rating="5" >
+            <div class="dest-img-container">
+                <img src="Hotel Tugu.jpg" alt="Hotel Tugu" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Hotel Tugu</h4>
+                <p class="dest-location">📍 Jl Tugu No 3, Kec. Klojen, Kota Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Akses Disabilitas</span>
+                    <span class="tag">Mini bar</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 40.000-50.000</span>
+                    <button class="btn-select select" data-type="hotel" data-name="Mikutopia" data-price="50000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="dest-card" data-category="hostel" data-facilities="kolam-renang wi-fi disabilitas" data-rating="4" data-price="0-100000">
+            <div class="dest-img-container">
+                <img src="Rayz UMM.jpg" alt="Rays UMM Hotel" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Rays UMM Hotel</h4>
+                <p class="dest-location">📍 Jl Raya Sengkaling No.1, Kec. Dau, Kab. Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Kolam renang</span>
+                    <span class="tag">Taman</span>
+                    <span class="tag">Playground</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 40.000-50.000</span>
+                    <button class="btn-select select" data-type="hotel" data-name="Mikutopia" data-price="50000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- STEP 4: KULINER -->
+<div id="stepContent4" class="step-content">
+    <!-- Header Step -->
+    <div class="step-header-text">
+        <h2 class="main-step-title">Eksplorasi Kuliner & Tempat Makan</h2>
+        <p class="sub-step-title">Temukan makanan khas, cafe aesthetic, hingga kuliner legendaris pilihanmu.</p>
+    </div>
+
+    <!-- Category Pills Kuliner -->
+    <div class="category-pills step-pills" id="foodCategoryPills">
+        <button class="pill-btn active" data-category="all"><span class="pill-icon bg-yellow">⭐</span> Populer</button>
+        <button class="pill-btn" data-category="warung"><span class="pill-icon bg-orange">🍜</span> Warung Khas & Legendaris</button>
+        <button class="pill-btn" data-category="cafe"><span class="pill-icon bg-purple">☕</span> Cafe</button>
+        <button class="pill-btn" data-category="restoran"><span class="pill-icon bg-green">🍽️</span> Restoran & Dining</button>
+    </div>
+
+    <!-- Panel Filter Tambahan -->
+    <div class="filter-panel-card">
+        <div class="filter-top-row">
+
+            <div class="filter-group">
+                <label>Perkiraan Harga / Porsi</label>
+                <div class="select-wrapper">
+                    <span class="input-icon">💰</span>
+                    <select id="filterFoodPrice">
+                        <option value="all">Semua Budget</option>
+                        <option data-price="0-25000" value="0-25000">&lt; Rp 25.000</option>
+                        <option data-price="25000-50000" value="25000-50000">Rp 25.000 - Rp 50.000</option>
+                        <option data-price="50000-75000" value="50000-75000">Rp 50.000 - Rp 75.000</option>
+                        <option data-price="75000-100000" value="75000-100000">Rp 75.000 - Rp 100.000</option>
+                        <option data-price="100000-99999999" value="100000-99999999">&gt; Rp 100.000</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-bottom-row">
+                <div class="facilities-group" id="foodFacilityGroup">
+                    <span class="facilities-label">Fasilitas dan suasana:</span>
+                    <label class="checkbox-label" data-facility="all">Semua</label>
+                    <label class="checkbox-label" data-facilities="wi-fi"><input type="checkbox" value="wi-fi"> Wi-Fi & Work Friendly</label>
+                    <label class="checkbox-label" data-facilities="halal"><input type="checkbox" value="halal">✨ Halal Certified</label>
+                    <label class="checkbox-label" data-facilities="outdoor"><input type="checkbox" value="outdoor">🏔️ Outdoor View</label>
+                    <label class="checkbox-label" data-facilities="family-friendly"><input type="checkbox" value="family-friendly">👨‍👩‍👧‍👦 Family Friendly</label>
+                    <label class="checkbox-label" data-facilities="musholla"><input type="checkbox" value="musholla">🕌 Musholla</label>
+                    <label class="checkbox-label" data-facilities="smoking"><input type="checkbox" value="smoking">🚬 Smoking Area</label>
+                </div>
+
+                <div class="sort-group">
+                    <label>🔀 Urutkan:</label>
+                    <select id="sortSelect">
+                        <option value="rekomendasi">Rekomendasi</option>
+                        <option value="terendah">Harga Terendah</option>
+                        <option value="tertinggi">Harga Tertinggi</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grid Card Kuliner -->
+    <div class="destinations-grid">
+        <!-- Card 1 -->
+        <div class="dest-card" data-category="warung" data-price="25000-50000" data-facilities="halal outdoor">
+            <div class="dest-img-container">
+                <img src="Bakso President.jpeg" alt="Bakso President" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Bakso President</h4>
+                <p class="dest-location">📍 Malang • Kuliner Khas</p>
+                <div class="dest-tags">
+                    <span class="tag">Legendaris</span>
+                    <span class="tag">Pinggir Rel Kereta</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 35.000 <small style="font-size: 0.7rem; color: #64748b;">/porsi</small></span>
+                    <button class="btn-select" data-type="food" data-name="Bakso President" data-price="35000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Card 2 -->
+        <div class="dest-card" data-category="all populer" data-price="0-25000" data-facilities="halal outdoor">
+            <div class="dest-img-container">
+                <img src="pos ketan legenda.jpg" alt="Pos Ketan Legenda" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Pos Ketan Legenda 1967</h4>
+                <p class="dest-location">📍 Alun-alun Batu</p>
+                <div class="dest-tags">
+                    <span class="tag">Dessert / Camilan</span>
+                    <span class="tag">Buka Malam</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 20.000 <small style="font-size: 0.7rem; color: #64748b;">/porsi</small></span>
+                    <button class="btn-select" data-type="food" data-name="Pos Ketan Legenda" data-price="20000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="dest-card" data-category="warung" data-price="0-25000" data-facilities="halal family-friendly">
+            <div class="dest-img-container">
+                <img src="Tahu Lonceng.jpg" alt="Tahu Lonceng" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Tahu Lonceng</h4>
+                <p class="dest-location">📍 Kedungkandang, Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Legendaris</span>
+                    <span class="tag">Harga Terjangkau</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 12.000 <small style="font-size: 0.7rem; color: #64748b;">/porsi</small></span>
+                    <button class="btn-select" data-type="food" data-name="Tahu Lonceng" data-price="12000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="dest-card" data-category="warung" data-price="25000-50000" data-facilities="halal family-friendly">
+            <div class="dest-img-container">
+                <img src="Toko Oen" alt="Toko Oen Malang" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Toko Oen Malang</h4>
+                <p class="dest-location">📍 Kayutangan, Kota Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Dessert / Camilan</span>
+                    <span class="tag">Es Krim Kolonial</span>
+                    <span class="tag">Sejak 1930</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 25.000 <small style="font-size: 0.7rem; color: #64748b;">/porsi</small></span>
+                    <button class="btn-select" data-type="food" data-name="Toko Oen Malang" data-price="25000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="dest-card" data-category="warung populer all" data-price="25000-50000" data-facilities="halal family-friendly musholla">
+            <div class="dest-img-container">
+                <img src="Rawon Rampal.jpg" alt="Rawon Rampal" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Rawon Rampal</h4>
+                <p class="dest-location">📍 Blimbing, Kota Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Rawon Tungku Kayu</span>
+                    <span class="tag">Musholla</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 45.000 <small style="font-size: 0.7rem; color: #64748b;">/porsi</small></span>
+                    <button class="btn-select" data-type="food" data-name="Rawon Rampal" data-price="25000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+        <!-- Card 6  -->
+        <div class="dest-card" data-category="cafe all populer" data-price="25000-50000" data-facilities="wi-fi outdoor smoking musholla halal family-friendly">
+            <div class="dest-img-container">
+                <img src="Toko Oen" alt="Nakoa Cafe" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Nakoa Cafe</h4>
+                <p class="dest-location">📍 Suhat, Kota Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Buka 24 Jam</span>
+                    <span class="tag">Wi-Fi</span>
+                    <span class="tag">Musholla</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 22.000 <small style="font-size: 0.7rem; color: #64748b;">/porsi</small></span>
+                    <button class="btn-select" data-type="food" data-name="Nakoa Cafe" data-price="22000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="dest-card" data-category="all cafe populer" data-price="25000-50000" data-facilities="halal wi-fi outdoor musholla family-friendly smoking">
+            <div class="dest-img-container">
+                <img src="Lafayette.jpg" alt="Lafayette" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Lafayette Coffee & Eatery</h4>
+                <p class="dest-location">📍 Klojen, Kota Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">European Heritage</span>
+                    <span class="tag">Rooftop View</span>
+                    <span class="tag">Wi-Fi</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 45.000 <small style="font-size: 0.7rem; color: #64748b;">/porsi</small></span>
+                    <button class="btn-select" data-type="food" data-name="Lafayette" data-price="45000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="dest-card" data-category="cafe" data-price="0-25000" data-facilities="halal wi-fi outdoor smoking">
+            <div class="dest-img-container">
+                <img src="Fajar Baru.jpg" alt="Fajar Baru" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Fajar Baru (Pisang Kipas)</h4>
+                <p class="dest-location">📍 Lowokwaru, Kota Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Buka 24 Jam</span>
+                    <span class="tag">Parkir Luas</span>
+                    <span class="tag">Wi-Fi</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 15.000 <small style="font-size: 0.7rem; color: #64748b;">/porsi</small></span>
+                    <button class="btn-select" data-type="food" data-name="Fajar Baru" data-price="15000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="dest-card" data-category="cafe" data-price="0-25000" data-facilities="halal wi-fi outdoor smoking">
+            <div class="dest-img-container">
+                <img src="Litchi.jpg" alt="Litchi Cafe" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Litchi Cafe Malang</h4>
+                <p class="dest-location">📍 Lowokwaru, Kota Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Tropical Aesthetic</span>
+                    <span class="tag">Outdoor</span>
+                    <span class="tag">Wi-Fi</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 35.000 <small style="font-size: 0.7rem; color: #64748b;">/porsi</small></span>
+                    <button class="btn-select" data-type="food" data-name="Litchi Cafe" data-price="35000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="dest-card" data-category="all restoran populer" data-price="50000-75000" data-facilities="halal wi-fi family-friendly musholla outdoor">
+            <div class="dest-img-container">
+                <img src="Harmoni.jpg" alt="Harmoni" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Harmoni Resto Malang</h4>
+                <p class="dest-location">📍 Oro - Oro Dowo, Kota Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Chinese & Indonesian</span>
+                    <span class="tag">Family Dining</span>
+                    <span class="tag">Halal</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 55.000 <small style="font-size: 0.7rem; color: #64748b;">/porsi</small></span>
+                    <button class="btn-select" data-type="food" data-name="Harmoni Resto" data-price="55000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="dest-card" data-category="restoran" data-price="75000-100000" data-facilities="halal wi-fi family-friendly outdoor">
+            <div class="dest-img-container">
+                <img src="Melati Restaurant.jpg" alt="Melati Restaurant" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Melati Restaurant (Tugu)</h4>
+                <p class="dest-location">📍 Pusat Kota Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Fine Dining</span>
+                    <span class="tag">Peranakan & Western</span>
+                    <span class="tag">24 Jam</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 95.000 <small style="font-size: 0.7rem; color: #64748b;">/porsi</small></span>
+                    <button class="btn-select" data-type="food" data-name="Melati Restaurant" data-price="95000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="dest-card" data-category="restoran" data-price="50000-75000" data-facilities="halal wi-fi family-friendly outdoor musholla">
+            <div class="dest-img-container">
+                <img src="Ocean Garden.jpg" alt="Ocean Garden" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Ocean Garden Resto</h4>
+                <p class="dest-location">📍 Lowokwaru, Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Seafood & Ikan Bakar</span>
+                    <span class="tag">Lesahan Saung</span>
+                    <span class="tag">Musholla</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 55.000 <small style="font-size: 0.7rem; color: #64748b;">/porsi</small></span>
+                    <button class="btn-select" data-type="food" data-name="Ocean Garden" data-price="55000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 13 -->
+        <div class="dest-card" data-category="restoran" data-price="25000-50000" data-facilities="halal wi-fi family-friendly musholla">
+            <div class="dest-img-container">
+                <img src="Pak Ndut.jpg" alt="Bebek & Ayam Goreng Pak Ndut" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Bebek & Ayam Goreng Pak Ndut</h4>
+                <p class="dest-location">📍 Lowokwaru, Malang</p>
+                <div class="dest-tags">
+                    <span class="tag">Bebek Goreng Srempet</span>
+                    <span class="tag">Aneka Sambal</span>
+                    <span class="tag">Halal</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 35.000 <small style="font-size: 0.7rem; color: #64748b;">/porsi</small></span>
+                    <button class="btn-select" data-type="food" data-name="Bebek & Ayam Goreng Pak Ndut" data-price="35000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- STEP 5: MOBILITAS / TRANSPORTASI -->
+<div id="stepContent5" class="step-content">
+    <!-- Header Step Konsisten -->
+    <div class="step-header-text">
+        <h2 class="main-step-title">🚗 Opsi Transportasi & Mobilitas Lokal</h2>
+        <p class="sub-step-title">Pilih kendaraan yang nyaman untuk mempermudah perjalanan kamu selama liburan.</p>
+    </div>
+
+    <!-- Category Pills Transportasi (Tambahkan class 'active' di Sewa Mobil) -->
+    <div class="category-pills step-pills" id="transportCategoryPills">
+        <button class="pill-btn active" data-category="sewa-mobil"><span class="pill-icon bg-blue">🚗</span> Sewa Mobil</button>
+        <button class="pill-btn" data-category="sewa-motor"><span class="pill-icon bg-green">🛵</span> Sewa Motor</button>
+    </div>
+
+    <!-- Panel Filter Tambahan Transportasi -->
+    <div class="filter-panel-card">
+        <div class="filter-top-row">
+
+            <div class="filter-group">
+                <label>Kapasitas Penumpang</label>
+                <div class="select-wrapper">
+                    <span class="input-icon">👥</span>
+                    <select id="filterCapacity">
+                        <option value="all">Semua Kapasitas</option>
+                        <option value="1-2">1 - 2 Orang (Motor)</option>
+                        <option value="4-6">4 - 6 Orang (Mobil MPV)</option>
+                        <option value="7+">&gt; 7 Orang (Microbus/Elf)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-bottom-row">
+                <div class="facilities-group" id="transportFacilityGroup">
+                    <span class="facilities-label">Fasilitas:</span>
+                    <label class="checkbox-label"><input type="checkbox" value="layanan-antar-jemput">🚐 Layanan Antar Jemput</label>
+                    <label class="checkbox-label"><input type="checkbox" value="dengan-driver">👨‍✈️ Dengan Driver</label>
+                    <label class="checkbox-label"><input type="checkbox" value="lepas-kunci">🔑 Lepas Kunci</label>
+                    <label class="checkbox-label"><input type="checkbox" value="termasuk-helm">🪖 Termasuk Helm</label>
+                    <label class="checkbox-label"><input type="checkbox" value="termasuk-jas-hujan">🌧️ Termasuk Jas Hujan</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grid Card Transportasi -->
+    <div class="destinations-grid">
+        
+        <!-- Card 1: Sewa Mobil Avanza -->
+        <div class="dest-card" data-category="all sewa-mobil populer" data-capacity="7+" data-facilities="layanan-antar-jemput dengan-driver">
+            <div class="dest-img-container">
+                <img src="Tigadara.jpg" alt="Sewa Mobil Avanza" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Tigadara Transport</h4>
+                <p class="dest-location">📍 Blimbing, Kota Malang/p>
+                <div class="dest-tags">
+                    <span class="tag">Rapi, Bersih</span>
+                    <span class="tag">Harga Terjangkau</span>
+                    <span class="tag">Driver Ramah</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 800.000 <small style="font-size: 0.7rem; color: #64748b;">/12 Jam</small></span>
+                    <button class="btn-select" data-type="trans" data-name="Tigadara" data-price="800000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Sewa Motor Matic -->
+        <div class="dest-card" data-category="sewa-motor" data-capacity="1-2" data-facilities="termasuk-helm termasuk-jas-hujan layanan-antar-jemput lepas-kunci">
+            <div class="dest-img-container">
+                <img src="Sewa motor matic.jpg" alt="Sewa Motor Matic" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Sewa Motor Matic (NMAX / Vario)</h4>
+                <p class="dest-location">📍 Antar-Jemput Stasiun/Hotel • 👥 2 Orang</p>
+                <div class="dest-tags">
+                    <span class="tag">Helm 2x SNI</span>
+                    <span class="tag">Jas Hujan 2x</span>
+                    <span class="tag">Matic</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 80.000 <small style="font-size: 0.7rem; color: #64748b;">/hari</small></span>
+                    <button class="btn-select" data-type="trans" data-name="Sewa Motor Matic" data-price="80000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Toyota Innova Reborn -->
+        <div class="dest-card" data-category="sewa-mobil all populer" data-capacity="7+" data-facilities="dengan-driver layanan-antar-jemput">
+            <div class="dest-img-container">
+                <img src="toyota inova.jpg" alt="Toyota Innova Reborn" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Toyota Innova Reborn + Driver</h4>
+                <p class="dest-location">📍 Nyaman & Nyaman • 👥 Maks 7 Orang</p>
+                <div class="dest-tags">
+                    <span class="tag">Termasuk BBM</span>
+                    <span class="tag">Captain Seat</span>
+                    <span class="tag">AC Dingin</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 800.000 <small style="font-size: 0.7rem; color: #64748b;">/hari</small></span>
+                    <button class="btn-select" data-type="trans" data-name="Innova Reborn + Driver" data-price="800000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4: HiAce Commuter -->
+        <div class="dest-card" data-category="sewa-mobil all populer" data-capacity="7+" data-facilities="dengan-driver layanan-antar-jemput">
+            <div class="dest-img-container">    
+                <img src="Sewa hiace.jpg" alt="Toyota HiAce Commuter" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Toyota HiAce Commuter</h4>
+                <p class="dest-location">📍 Rombongan Keluarga • 👥 Maks 14 Orang</p>
+                <div class="dest-tags">
+                    <span class="tag">Include Driver & BBM</span>
+                    <span class="tag">Luas & Lapang</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 1.200.000 <small style="font-size: 0.7rem; color: #64748b;">/hari</small></span>
+                    <button class="btn-select" data-type="trans" data-name="HiAce Commuter" data-price="1200000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5: Sunday Motorent -->
+        <div class="dest-card" data-category="sewa-motor" data-capacity="1-2" data-facilities="termasuk-helm termasuk-jas-hujan layanan-antar-jemput lepas-kunci">
+            <div class="dest-img-container">
+                <img src="Sunday Motorent.png" alt="Sunday Motorent" class="dest-img">
+            </div>
+            <div class="dest-body">
+                <h4 class="dest-title">Sunday Motorent</h4>
+                <p class="dest-location">📍 Antar-Jemput Stasiun/Hotel • 👥 2 Orang</p>
+                <div class="dest-tags">
+                    <span class="tag">2 Helm SNI</span>
+                    <span class="tag">Jas Hujan</span>
+                    <span class="tag">Layanan Antar-Jemput</span>
+                </div>
+                <div class="dest-bottom">
+                    <span class="dest-price">Rp 80.000 <small style="font-size: 0.7rem; color: #64748b;">/hari</small></span>
+                    <button class="btn-select" data-type="trans" data-name="Sunday Motorent" data-price="80000">+ Pilih</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- STEP 6: ITINERARY & ESTIMASI BIAYA -->
+<div id="stepContent6" class="step-content">
+    <div class="step-header-text">
+        <h2 class="main-step-title">🎉 Itinerary Siap Digunakan!</h2>
+        <p class="sub-step-title">Berikut rangkuman estimasi biaya dan rencana perjalanan otomatis kamu.</p>
+    </div>
+    <div class="summary-wrapper">
+        <!-- CARD TIMELINE ITINERARY -->
+        <div class="summary-card itinerary-timeline-card">
+            <h4 class="itinerary-card-title">Daftar Rencana Perjalanan</h4>
+           
+            <!-- TAB NAVIGASI HARI (Dinamis sesuai input Durasi Hari) -->
+            <div id="dayTabsContainer" class="day-tabs-wrapper">
+                <!-- Di-render otomatis lewat JS: [ Hari 1 ] [ Hari 2 ] [ Hari 3 ] -->
+            </div>
+
+            <!-- TAMBAHAN BARU: PETUNJUK PENGATURAN JADWAL -->
+            <p class="schedule-helper-text">
+                Atur tanggal dan jam kunjungan setiap tempat.
+                Urutan perjalanan akan menyesuaikan secara otomatis.
+            </p>
+
+            <!-- List Timeline Dinamis -->
+            <div id="itineraryTimeline" class="timeline-container">
+                <!-- Di-render otomatis lewat JavaScript -->
+            </div>
+        </div>
+
+<!-- CARD RINGKASAN & BUDGET ESTIMASI -->
+        <div class="summary-card budget-card">
+            <h4>📍 Detail Perjalanan</h4>
+            <p><strong>Atas Nama:</strong> <span id="sumName">-</span></p>
+            <p><strong>Tujuan:</strong> <span id="sumCity">-</span> (<span id="sumDays">0</span> Hari, <span id="sumPersons">0</span> Orang)</p>
+
+
+
+
+            <button class="btn-primary btn-full" style="margin-top: 1.5rem;" onclick="saveItineraryToStorage(event)">
+                💾 Simpan & Lihat Itinerarymu
+            </button>
+           
+            <hr class="divider">
+           
+            <h4>💰 Budget Estimasi Total</h4>
+            <div class="total-price" id="sumTotalCost">Rp 0</div>
+            <p><small>Estimasi per Orang: </small><strong id="sumPerPersonCost">Rp 0</strong></p>
+           
+            <button class="btn-primary btn-full" style="margin-top: 1.5rem;" onclick="alert('Itinerary Berhasil Disimpan & Siap Diunduh!');">Download PDF E-Booklet 📄</button>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Footer Navigasi (Bottom Navigation Bar) -->
+        <div class="explore-footer">
+            <button class="btn-secondary" id="btnBackToDiscovery">← Kembali ke Katalog</button>
+            <button class="btn-secondary" id="btnPrevStep" style="display: none;">← Sebelumnya</button>
+            <button class="btn-primary" id="btnNextStep">Lanjut: Destinasi ➔</button>
+        </div>
+
+    <script src="js/explore.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

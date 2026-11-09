@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLANIGO - Plan Your Trip, Ready To Go</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts untuk Tipografi Modern -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo-container">
+            <h2>Planigo</h2>
+            <span>Plan Your Trip, Ready To Go</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#fitur">Fitur</a></li>
+            <li><a href="#layanan">Layanan & Harga</a></li>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="my-itinerary.html" class="nav-itinerary-btn">Itinerarymu</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="btn-secondary" id="btnOpenLogin">Masuk</button>
+            <button class="btn-primary" id="btnOpenRegister">Daftar</button>
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="hero">
+        <div class="hero-tag">🚀 Smart Travel Itinerary Planner</div>
+        <h1>Rencanakan Perjalanan Impianmu Tanpa Ribet</h1>
+        <p>Jelajahi destinasi pilihan, temukan tempat menginap terbaik, dan susun itinerari liburanmu secara otomatis hanya dalam hitungan menit.</p>
+       
+        <div class="cta-card">
+            <div class="cta-text">
+                <small style="color: var(--golden-sun); font-weight: bold;">✨ Siap Untuk Petualangan Baru?</small>
+                <h3>Ayo, mau liburan ke mana hari ini?</h3>
+            </div>
+            <a href="explore.html" class="btn-primary">Mulai Cari & Susun ➔</a>
+        </div>
+    </section>
+
+
+    <!-- FITUR UNGGULAN -->
+    <section id="fitur" class="features-section">
+        <h2 class="section-title">Fitur Unggulan PLANIGO</h2>
+        <p class="section-subtitle">Semua yang kamu butuhkan untuk menyusun itinerary tanpa ribet</p>
+
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h4>Informasi Terintegrasi</h4>
+                <p>Temukan destinasi wisata, tempat kuliner, penginapan, dan opsi transportasi dalam satu platform.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h4>Pencarian & Filter Cerdas</h4>
+                <p>Saring pilihan destinasi berdasarkan preferensi gaya liburan, batas anggaran, dan fasilitas.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🗓️</div>
+                <h4>Itinerary Otomatis</h4>
+                <p>Susun jadwal perjalanan harian secara otomatis dan rapi berdasarkan tempat pilihanmu.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h4>Estimasi Anggaran</h4>
+                <p>Dapatkan hitungan otomatis biaya tiket, akomodasi, hingga rincian kalkulasi per orang.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- LAYANAN & HARGA -->
+    <section id="layanan" class="pricing-section">
+        <h2 class="section-title">Pilih Paket Layanan Kamu</h2>
+        <p class="section-subtitle">Sesuaikan fitur PLANIGO dengan gaya dan skala perjalananmu</p>
+
+
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Basic</h3>
+                <p><small>Cocok untuk perjalanan singkat & personal</small></p>
+                <div class="price">Rp 0 <small>/Selamanya</small></div>
+                <ul class="price-features">
+                    <li>✔ Rekomendasi Destinasi, Kuliner, Penginapan, & Sewa Transportasi</li>
+                    <li>✔ Akses Fitur Filter Informasi</li>
+                    <li>✔ Itinerary Dasar (Bentuk List)</li>
+                    <li>✔ Akses Online Saja</li>
+                </ul>
+                <button class="btn-secondary btn-full">Pilih Basic</button>
+            </div>
+
+
+            <div class="price-card popular">
+                <span class="badge-popular">Paling Populer</span>
+                <h3>Premium</h3>
+                <p><small>Solusi lengkap liburan rombongan & keluarga</small></p>
+                <div class="price">Rp 10.000 <small>/Plan</small></div>
+                <ul class="price-features">
+                    <li>✔ Semua fitur paket Basic</li>
+                    <li>✔ Personalized Travel E-Booklet (Offline PDF)</li>
+                    <li>✔ Estimasi Anggaran Lengkap (Penginapan, Tiket, & Transport)</li>
+                    <li>✔ Kalkulasi Perkiraan Biaya Per Orang</li>
+                    <li>✔ Estimasi Waktu Ramai & Travel Tips</li>
+                    <li>✔ 1x Revisi E-Booklet</li>
+                    <li>✔ Informasi Pendukung Lengkap (Cuaca, Kondisi Jalan, Minimarket, ATM, Pasar terdekat)</li>
+                    <li>✔ Informasi Layanan Darurat & Layanan Kesehatan Terdekat</li>
+                </ul>
+                <button class="btn-primary btn-full">Pilih Premium</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION TENTANG KAMI -->
+<section id="tentang" class="about-section">
+    <div class="about-container">
+       
+        <!-- Header Section -->
+        <div class="about-header">
+            <span class="badge-pill">✨ Kenali Planigo</span>
+            <h2>Solusi Cerdas Liburan Impianmu</h2>
+            <p>Planigo hadir untuk mengubah cara orang merencanakan liburan. Tidak ada lagi kebingungan memilih destinasi atau menyusun jadwal yang membingungkan.</p>
+        </div>
+
+
+        <!-- Grid 3 Poin Keunggulan -->
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="about-icon bg-teal">⚡</div>
+                <h4>Cepat & Otomatis</h4>
+                <p>Hanya melalui 6 langkah mudah, itinerary perjalananmu beserta estimasi biaya langsung siap dalam hitungan detik.</p>
+            </div>
+
+
+            <div class="about-card">
+                <div class="about-icon bg-blue">🗺️</div>
+                <h4>Rekomendasi Terkurasi</h4>
+                <p>Menyajikan pilihan destinasi wisata, hotel, kuliner khas, hingga transportasi lokal yang akurat dan terpercaya.</p>
+            </div>
+
+
+            <div class="about-card">
+                <div class="about-icon bg-orange">💾</div>
+                <h4>Akses Kapan Saja</h4>
+                <p>Rencana perjalanan tersimpan aman di browsermu dan bisa diakses kembali kapan saja melalui menu <strong>Itinerarymu</strong>.</p>
+            </div>
+        </div>
+
+
+        <!-- Banner Statistik Singkat -->
+        <div class="about-stats-banner">
+            <div class="stat-item">
+                <h3>50+</h3>
+                <p>Destinasi Populer</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Gratis & Transparan</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <h3>4.9★</h3>
+                <p>Kepuasan Pengguna</p>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+    <!-- MODAL POPUP LOGIN & REGISTER -->
+    <div class="modal-overlay" id="authModal">
+        <div class="modal-content">
+            <button class="close-modal" id="btnCloseModal">&times;</button>
+            <div class="modal-tabs">
+                <button class="tab-btn active" id="tabLoginBtn">Masuk</button>
+                <button class="tab-btn" id="tabRegBtn">Daftar</button>
+            </div>
+
+
+            <!-- Form Login -->
+            <form id="loginForm" class="auth-form active">
+                <h3 style="margin-bottom: 1rem; color: var(--deep-sea-teal);">Selamat Datang Kembali!</h3>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="nama@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Kata Sandi</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-primary btn-full">Masuk ke PLANIGO</button>
+            </form>
+
+
+            <!-- Form Register -->
+            <form id="regForm" class="auth-form">
+                <h3 style="margin-bottom: 1rem; color: var(--deep-sea-teal);">Buat Akun PLANIGO</h3>
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="Nama Anda" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="nama@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Kata Sandi</label>
+                    <input type="password" placeholder="Minimal 8 karakter" required>
+                </div>
+                <button type="submit" class="btn-primary btn-full">Daftar Sekarang</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerarymu - Planigo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/explore.css">
+</head>
+<body>
+    <!-- NAV BAR -->
+    <header class="navbar">
+        <div class="logo-container">
+        <h2>Planigo</h2>
+        <span>Plan Your Trip, Ready To Go</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Beranda</a>
+            <a href="explore.html">Jelajah</a>
+            <a href="my-itinerary.html" class="active">Itinerarymu</a>
+                        <li><a href="akun-pengguna.html">
+                    <div class="nav-avatar-img">SK</div>
+                </a>
+            </li>
+        </nav>
+    </header>
+
+
+    <main class="main-container" style="padding: 2rem 10%; margin-top: 80px;">
+        <h2>💼 Rencana Perjalanan Tersimpan</h2>
+        <p style="color: #64748b; margin-bottom: 2rem;">Berikut adalah itinerary yang sudah kamu rancang sebelumnya.</p>
+
+
+        <!-- CONTAINER HASIL ITINERARY -->
+        <div id="savedItineraryContent">
+            <!-- Di-render oleh JavaScript -->
+        </div>
+    </main>
+
+
+ <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            renderAllItineraries();
+        });
+
+        function renderAllItineraries() {
+            const contentEl = document.getElementById("savedItineraryContent");
+            const dataRaw = localStorage.getItem("planigo_saved_itinerary");
+
+            if (!dataRaw) {
+                renderEmptyState(contentEl);
+                return;
+            }
+
+            let dataList = JSON.parse(dataRaw);
+
+            // Antisipasi jika data lama masih berformat single object
+            if (!Array.isArray(dataList)) {
+                dataList = [dataList];
+            }
+
+            if (dataList.length === 0) {
+                renderEmptyState(contentEl);
+                return;
+            }
+
+            let cardsHtml = "";
+
+            // Loop untuk merender setiap kotak itinerary yang tersimpan
+            dataList.forEach((data) => {
+                let timelineHtml = "";
+                if (data.items && data.items.length > 0) {
+                    data.items.forEach(item => {
+                        timelineHtml += `
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h5>${item.title}</h5>
+                                    <p>Agenda kunjungan liburan.</p>
+                                </div>
+                                <div class="timeline-time-box">
+                                    <span style="font-size: 0.85rem; font-weight: 700; color: #0284c7;">⏰ ${item.time} WIB</span>
+                                </div>
+                            </div>`;
+                    });
+                } else {
+                    timelineHtml = `<p style="color: #94a3b8;">Tidak ada daftar agenda.</p>`;
+                }
+
+                cardsHtml += `
+                    <div class="itinerary-card-item" style="background: #fff; padding: 2rem; border-radius: 24px; border: 1px solid #e2e8f0; margin-bottom: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; padding-bottom: 0.8rem; border-bottom: 2px dashed #f1f5f9;">
+                            <h3 style="color: #008080; margin: 0;">🗺️ Rencana Perjalanan (${data.city || 'Tujuan'})</h3>
+                            <span style="font-size: 0.85rem; color: #64748b; font-weight: 600;">Dibuat: ${data.savedAt || '-'}</span>
+                        </div>
+                        <div class="summary-wrapper" style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
+                            <div class="summary-card itinerary-timeline-card" style="background: #fff; padding: 0; box-shadow: none; border: none;">
+                                <h4 class="itinerary-card-title">Daftar Agenda</h4>
+                                <div class="timeline-container">
+                                    ${timelineHtml}
+                                </div>
+                            </div>
+                            <div class="summary-card budget-card" style="background: #f8fafc; padding: 1.5rem; border-radius: 16px; border: 1px solid #e2e8f0;">
+                                <h4>📍 Ringkasan</h4>
+                                <p><strong>Nama:</strong> ${data.name}</p>
+                                <p><strong>Tujuan:</strong> ${data.city} (${data.days} Hari, ${data.persons} Orang)</p>
+                                <hr class="divider">
+                                <h4>💰 Total Biaya</h4>
+                                <div class="total-price" style="font-size: 1.4rem; color: #0284c7; font-weight: 800;">${data.totalCost}</div>
+                                <button class="btn-primary btn-full" style="margin-top: 1.5rem; background: #ef4444; border: none; padding: 0.7rem; border-radius: 12px; color: #fff; cursor: pointer; font-weight: 700; width: 100%;" onclick="deleteSingleItinerary(${data.id})">🗑️ Hapus Itinerary Ini</button>
+                            </div>
+                        </div>
+                    </div>`;
+            });
+
+            contentEl.innerHTML = cardsHtml;
+        }
+
+        function renderEmptyState(container) {
+            container.innerHTML = `
+                <div style="text-align: center; padding: 3rem; background: #fff; border-radius: 20px; border: 1px solid #e2e8f0;">
+                    <h3>Belum ada itinerary yang disimpan 📭</h3>
+                    <p style="color: #64748b; margin: 1rem 0;">Mulai rancang liburan impianmu melalui halaman Jelajah.</p>
+                    <a href="explore.html" class="btn-primary" style="display: inline-block; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 12px; background: #0284c7; color: #fff;">Buat Itinerary Sekarang 🚀</a>
+                </div>`;
+        }
+
+        function deleteSingleItinerary(id) {
+            if (confirm("Apakah kamu yakin ingin menghapus itinerary ini?")) {
+                let savedList = JSON.parse(localStorage.getItem("planigo_saved_itinerary")) || [];
+                
+                // Filter array untuk membuang itinerary yang ID-nya dipilih untuk dihapus
+                savedList = savedList.filter(item => item.id !== id);
+
+                if (savedList.length === 0) {
+                    localStorage.removeItem("planigo_saved_itinerary");
+                } else {
+                    localStorage.setItem("planigo_saved_itinerary", JSON.stringify(savedList));
+                }
+
+                renderAllItineraries(); // Muat ulang tampilan tanpa reload halaman
+            }
+        }
+    </script>
+</body>
+</html>
+

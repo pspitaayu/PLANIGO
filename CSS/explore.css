@@ -1,0 +1,2224 @@
+/* css/explore.css */
+
+/* KONTANER UTAMA EXPLORE */
+.explore-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 5%;
+}
+
+
+/* 1. STEPPER NAVIGATION (GLASSMORPHISM & MODERN INDICATOR) */
+.stepper-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 1.2rem 8%;
+  border-bottom: 1px solid rgba(224, 216, 200, 0.6);
+  position: sticky;
+  top: 73px;
+  z-index: 90;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+
+
+
+
+
+
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.step-item.active {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+.step-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+.step-item.active .step-num {
+  background: linear-gradient(135deg, var(--deep-sea-teal) 0%, #006666 100%);
+  color: var(--white);
+  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.3);
+}
+
+
+
+
+
+
+
+
+.step-label strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text-dark);
+}
+
+
+
+
+
+
+
+
+.step-label small {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+
+
+
+
+
+
+
+/* 2. DISCOVERY HEADER & SEARCH */
+.discovery-header {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+.discovery-header h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--deep-sea-teal);
+  letter-spacing: -0.5px;
+  margin-bottom: 0.4rem;
+}
+
+
+
+
+
+
+
+
+.discovery-header p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+.search-box-wrapper {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+.search-box-wrapper input {
+  width: 100%;
+  padding: 1rem 1.2rem 1rem 3.2rem;
+  border-radius: 30px;
+  border: 1px solid var(--border-light);
+  background: var(--white);
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-soft);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+.search-box-wrapper input:focus {
+  border-color: var(--deep-sea-teal);
+  box-shadow: 0 0 0 4px rgba(0, 128, 128, 0.1);
+}
+
+
+
+
+
+
+
+
+.search-icon {
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+/* 3. CATEGORY PILLS */
+.category-pills {
+  display: flex;
+  gap: 0.8rem;
+  overflow-x: auto;
+  padding-bottom: 0.8rem;
+  margin-bottom: 2.5rem;
+  scrollbar-width: thin;
+}
+
+
+
+
+
+
+
+
+.pill-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  padding: 0.5rem 1.3rem 0.5rem 0.6rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--text-dark);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+.pill-btn:hover, .pill-btn.active {
+  background: var(--deep-sea-teal);
+  color: var(--white);
+  border-color: var(--deep-sea-teal);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 128, 128, 0.2);
+}
+
+
+
+
+
+
+
+
+.pill-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+
+
+
+
+
+
+
+.bg-yellow { background: #fff3cd; }
+.bg-purple { background: #e2d9f3; }
+.bg-green  { background: #d1e7dd; }
+.bg-orange { background: #ffe5d0; }
+.bg-blue   { background: #cfe2ff; }
+.bg-red    { background: #f8d7da; }
+.bg-pink   { background: #f8d0e0; }
+
+
+
+
+
+
+
+
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+
+
+
+
+
+
+
+/* 4. DESTINATION CARDS MODERN */
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+
+
+
+
+
+
+
+.dest-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+.dest-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+
+
+
+
+
+
+
+.dest-img-container {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+.dest-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+
+
+
+
+
+
+
+.dest-card:hover .dest-img {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+.dest-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
+
+
+
+
+
+
+.dest-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.2rem;
+}
+
+
+
+
+
+
+
+
+.dest-location {
+  font-size: 0.82rem;
+  color: #e11d48;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+.dest-tags {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+.tag {
+  background: #f1f5f9;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+.dest-bottom {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.8rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+
+
+
+
+
+
+
+.dest-price {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--deep-sea-teal);
+}
+
+
+
+
+
+
+
+
+.btn-select {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: var(--text-dark);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+.btn-select:hover {
+  background: var(--deep-sea-teal);
+  color: var(--white);
+  border-color: var(--deep-sea-teal);
+}
+
+
+
+
+
+
+
+
+.btn-select.selected {
+  background: #10b981;
+  border-color: #10b981;
+  color: var(--white);
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.25);
+}
+
+
+
+
+
+
+
+
+/* 5. INFO BANNER & FLOATING BUTTON */
+.info-banner {
+  background: var(--white);
+  border-radius: 24px;
+  padding: 1.2rem 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-light);
+  margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+.info-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fef3c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+
+
+
+
+
+
+
+.info-text strong {
+  font-size: 1rem;
+  color: var(--text-dark);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+
+
+
+
+
+
+
+.info-text p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+
+
+
+
+
+
+
+.btn-floating {
+  position: fixed;
+  bottom: 30px;
+  right: 5%;
+  background: linear-gradient(135deg, var(--deep-sea-teal) 0%, #006666 100%);
+  color: var(--white);
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  box-shadow: 0 10px 25px rgba(0, 128, 128, 0.35);
+  cursor: pointer;
+  z-index: 99;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+.btn-floating:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(0, 128, 128, 0.45);
+}
+
+
+
+
+
+
+
+
+/* 6. STEPPER FORM STYLING (STEP 1 - 6) */
+.step-content { display: none; }
+.step-content.active { display: block; animation: fadeIn 0.4s ease; }
+
+
+
+
+
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+.step-title {
+  color: var(--deep-sea-teal);
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+
+
+
+
+
+
+
+.form-card-grid {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  border: 1px solid var(--border-light);
+}
+
+
+
+
+
+
+
+
+.form-group label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+
+
+
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+.form-group input:focus, .form-group select:focus {
+  border-color: var(--deep-sea-teal);
+  box-shadow: 0 0 0 3px rgba(0, 128, 128, 0.1);
+}
+
+
+
+
+
+
+
+
+/* SUMMARY STEP 6 */
+.summary-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+
+
+
+
+
+
+
+.summary-card {
+  background: var(--white);
+  padding: 2.2rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-light);
+}
+
+
+
+
+
+
+
+
+.summary-card.budget-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #e6f2f2 100%);
+  border: 2px solid var(--deep-sea-teal);
+}
+
+
+
+
+
+
+
+
+.summary-card h4 {
+  color: var(--deep-sea-teal);
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+.summary-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+
+
+
+
+
+
+
+.summary-list li {
+  padding: 0.8rem 0;
+  border-bottom: 1px dashed #cbd5e1;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+
+
+
+
+
+
+
+.total-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--deep-sea-teal);
+  margin: 0.8rem 0;
+}
+
+
+
+
+
+
+
+
+.divider {
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+
+
+
+
+
+
+
+/* FOOTER NAVIGASI STEPPER */
+.explore-footer {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-light);
+}
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .stepper-container { overflow-x: auto; padding: 1rem; gap: 1rem; }
+  .step-label { display: none; } /* Hanya tampil angka di mobile */
+}
+
+
+
+
+
+
+
+
+/* Styling Header Step 2 */
+.step-header-text {
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+
+
+
+
+.main-step-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.3rem;
+}
+
+
+
+
+
+
+
+
+.sub-step-title {
+    font-size: 1rem;
+    color: #64748b;
+}
+
+
+
+
+
+
+
+
+.step-pills {
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+
+
+/* Tag kecil di dalam card */
+.dest-tags {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+.dest-tags .tag {
+    background-color: #f1f5f9;
+    color: #64748b;
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+/* Status Tombol Terpilih (Hijau Sesuai Gambar) */
+.btn-select.selected {
+    background-color: #10b981 !important;
+    color: #ffffff !important;
+    border-color: #10b981 !important;
+}
+
+
+
+
+
+
+
+
+/* Status Tombol + Pilih (Biru Muda Soft Sesuai Gambar) */
+.btn-select {
+    background-color: #e0f2fe;
+    color: #0284c7;
+    border: 1px solid #bae6fd;
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+
+
+
+
+
+
+.btn-select:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+/* FILTER PANEL CONTAINER */
+.filter-panel-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 1.5rem 1.8rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+
+
+
+
+
+
+
+.filter-top-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+
+
+
+
+
+
+
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+
+
+
+
+
+
+
+.filter-group label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+
+
+
+
+
+
+
+/* INPUT SELECT STYLING */
+.select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+.select-wrapper .input-icon {
+    position: absolute;
+    left: 10px;
+    font-size: 0.85rem;
+}
+
+
+
+
+
+
+
+
+.select-wrapper select {
+    padding: 0.45rem 0.8rem 0.45rem 2.2rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    background: #f8fafc;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+/* JENIS AKOMODASI BUTTONS */
+.type-icon-group, .rating-btn-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.type-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #475569;
+    transition: all 0.2s ease;
+}
+
+.type-btn .type-icon {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.type-btn.active {
+    background: #e0f2fe;
+    border-color: #0284c7;
+    color: #0284c7;
+}
+
+/* RATING STAR BUTTONS */
+.star-btn {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 0.45rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.star-btn.active {
+    background: #0284c7;
+    color: #ffffff;
+    border-color: #0284c7;
+}
+
+
+
+
+
+
+
+
+/* BARIS BAWAH (FASILITAS & SORT) */
+.filter-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+}
+
+
+
+
+
+
+
+
+.facilities-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+.facilities-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+
+
+
+
+
+
+
+.checkbox-label {
+    font-size: 0.78rem;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+    background: #f8fafc;
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+
+
+
+
+
+
+
+.sort-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+
+
+
+
+
+
+.sort-group label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+
+
+
+
+
+
+
+.sort-group select {
+    padding: 0.35rem 0.8rem;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.8rem;
+    background: #ffffff;
+}
+
+
+/* TIMELINE ITINERARY STYLING (STEP 6) */
+.itinerary-timeline-card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e2e8f0;
+}
+
+
+.itinerary-card-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1.8rem;
+}
+
+/* TIMELINE CONTAINER & ITEMS */
+.timeline-container {
+    position: relative;
+    padding-left: 1.8rem;
+}
+
+/* Garis Putus-putus Vertikal di Kiri */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    border-left: 2px dashed #cbd5e1;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Titik Biru Timeline */
+.timeline-dot {
+    position: absolute;
+    left: -1.8rem;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background-color: #0284c7;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 2px #38bdf8;
+}
+
+.timeline-content h5 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.2rem;
+}
+
+.timeline-content p {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+/* INPUT JAM / EDIT TIME BOX */
+.timeline-time-box {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 0.35rem 0.6rem;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+
+
+
+
+
+
+
+.timeline-time-box label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+}
+
+
+
+
+
+
+
+
+.time-input {
+    border: none;
+    background: transparent;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0284c7;
+    outline: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+
+
+
+
+
+
+
+/* PENATAAN FILTER KULINER & FASILITAS */
+.filter-top-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+
+
+
+
+
+
+
+.filter-group.full-width {
+  flex: 1;
+  min-width: 280px;
+}
+
+
+
+
+
+
+
+
+/* KELOMPOK TOMBOL FASILITAS AGAR RAPI DAN MELIPAT DENGAN INDAH */
+.rating-btn-group.wrap-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+
+
+
+
+
+
+
+/* TAMPILAN BUTTON CHIP DENGAN EFEK HOVER MODEREN */
+.star-btn {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.45rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.25 ease;
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+.star-btn:hover {
+  background: #e0f2fe;
+  color: #0284c7;
+  border-color: #bae6fd;
+  transform: translateY(-1px);
+}
+
+
+
+
+
+
+
+
+.star-btn.active {
+  background: var(--deep-sea-teal, #008080);
+  color: #ffffff;
+  border-color: var(--deep-sea-teal, #008080);
+  box-shadow: 0 4px 10px rgba(0, 128, 128, 0.2);
+}
+
+
+
+
+
+
+
+
+/* =========================================================
+   STEP 1: FORM DETAIL TRIP MODERN STYLING
+   ========================================================= */
+
+
+
+
+
+
+
+
+.form-card-wrapper {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+.modern-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+
+
+
+
+
+
+
+.form-section-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+
+
+
+
+
+
+
+.form-block-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #008080; /* Deep Sea Teal Planigo */
+  padding-bottom: 0.6rem;
+  border-bottom: 2px dashed #e2e8f0;
+  margin-bottom: 0.4rem;
+}
+
+
+
+
+
+
+
+
+.form-group-custom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+
+
+
+
+
+
+
+.form-group-custom label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+
+
+
+
+
+
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+
+
+
+
+
+
+
+/* INPUT WITH ICON INSIDE */
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+.input-with-icon .field-icon {
+  position: absolute;
+  left: 1rem;
+  font-size: 1rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+.input-with-icon input,
+.input-with-icon select {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.8rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  background-color: #f8fafc;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+
+
+
+
+
+
+
+.input-with-icon input:focus,
+.input-with-icon select:focus {
+  border-color: #008080;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 128, 128, 0.12);
+}
+
+
+
+
+
+
+
+
+/* Responsif untuk Layar Kecil / HP */
+@media (max-width: 640px) {
+  .form-card-wrapper {
+    padding: 1.5rem;
+  }
+  .modern-form-grid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+  .form-row-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+
+
+/* TAB NAVIGASI HARI DI STEP 6 */
+.day-tabs-wrapper {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+
+
+
+
+
+
+
+.day-tab-btn {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+.day-tab-btn:hover {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+
+
+
+
+
+
+
+.day-tab-btn.active {
+  background: #008080; /* Warna Deep Sea Teal Planigo */
+  color: #ffffff;
+  border-color: #008080;
+  box-shadow: 0 4px 12px rgba(0, 128, 128, 0.2);
+}
+
+
+/* Styling Tombol Detail Penuh di Bawah Card */
+.btn-detail-full {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px 12px;
+  background-color: transparent;
+  color: #0d7a5f;
+  border: 1px solid #0d7a5f;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+
+.btn-detail-full:hover {
+  background-color: #0d7a5f;
+  color: #ffffff;
+}
+
+
+/* Styling Pop-Up Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 24px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: modalSlideIn 0.3s ease;
+}
+
+
+@keyframes modalSlideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.close-btn {
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+
+
+.close-btn:hover {
+  color: #333;
+}
+
+
+
+
+.destination-card.hide,
+.card-item.hide,
+.hide {
+  display: none !important;
+}
+
+
+.type-btn {
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+
+.type-btn:hover {
+    background: #e0f2fe;
+    border-color: #0284c7;
+    color: #0284c7;
+    transform: translateY(-2px);
+}
+
+
+.type-btn.active {
+    background: #0284c7;
+    border-color: #0284c7;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.25);
+}
+
+.dest-card.hide {
+    display: none !important;
+}
+
+/* ==========================================================================
+   LAYOUT DETAIL DESTINASI: SCROLL GALLERY TOP
+   ========================================================================== */
+
+
+/* Container Utama Konten */
+.page-container {
+  width: 100%;
+  max-width: 1280px;        
+  margin: 0 auto;          
+  padding: 2rem 5%;        
+  box-sizing: border-box;
+}
+
+
+/* 1. Galeri Foto Scroll Samping */
+.top-gallery-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* Mengatur ukuran & scroll snapping foto */
+.top-gallery-scroll img {
+  flex: 0 0 auto;
+  width: 360px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
+  scroll-snap-align: start;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+
+.top-gallery-scroll img:hover {
+  transform: translateY(-3px);
+}
+
+
+/* Kustomisasi Scrollbar agar Rapi */
+.top-gallery-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+
+.top-gallery-scroll::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+
+.top-gallery-scroll::-webkit-scrollbar-thumb {
+  background: #008080;
+  border-radius: 10px;
+}
+
+
+/* 2. Main Header (Nama, Alamat, Harga) */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+
+.dest-detail-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+
+.dest-address {
+  font-size: 0.95rem;
+  color: #e11d48;
+  font-weight: 500;
+}
+
+
+.header-right {
+  text-align: right;
+}
+
+
+.price-label {
+  font-size: 1rem;
+  color: #64748b;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+
+.dest-detail-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #008080;
+  background: #e6f2f2;
+  padding: 8px 18px;
+  border-radius: 12px;
+}
+
+
+/* Pembatas Halaman */
+.section-divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 2rem 0;
+}
+
+
+/* 3. Section & Overview */
+.detail-section {
+  margin-bottom: 2.5rem;
+}
+
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.8rem;
+}
+
+
+.overview-text {
+  line-height: 1.8;
+  color: #475569;
+  font-size: 0.98rem;
+  text-align: justify;
+}
+
+
+/* 4. Card Jam Operasional & Informasi */
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+
+.info-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+
+.info-card .info-icon {
+  font-size: 1.8rem;
+  padding: 4px;
+  border-radius: 10px;
+}
+
+
+.info-card h3 {
+  font-size: 1rem;
+  color: #0f172a;
+  margin-bottom: 0.4rem;
+}
+
+
+.info-card p {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 0.2rem;
+}
+
+
+.info-card ul {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 0.2rem;
+  padding-left: 1rem;
+}
+
+
+/* 5. Grid Fasilitas */
+.facilities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+
+.facility-badge {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+
+/* Responsif untuk Layar HP */
+@media (max-width: 640px) {
+  .top-gallery-scroll img {
+    width: 280px;
+    height: 190px;
+  }
+
+
+  .main-header {
+    flex-direction: column;
+  }
+
+
+  .header-right {
+    text-align: left;
+  }
+}
+
+
+
+/* Styling Tombol Detail Penuh di Bawah Card */
+.btn-detail-full {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px 12px;
+  background-color: transparent;
+  color: #0d7a5f;
+  border: 1px solid #0d7a5f;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-decoration: none !important;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+.btn-detail-full:hover {
+  background-color: #0d7a5f;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+/* Styling Pop-Up Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+
+
+
+
+
+
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 24px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: modalSlideIn 0.3s ease;
+}
+
+
+
+
+
+
+
+
+@keyframes modalSlideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+.close-btn {
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* 1. Sembunyikan semua blok detail destinasi secara default */
+.detail-item {
+  display: none;
+}
+
+
+/* 2. Tampilkan HANYA elemen yang id-nya sesuai dengan Hash di URL (#gwk, #mikutopia, dll) */
+.detail-item:target {
+  display: block;
+}
+
+/* TAMBAHAN BARU: PETUNJUK JADWAL ITINERARY */
+.schedule-helper-text {
+    margin: 0 0 12px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #718096;
+}
+
+
+
+
+
+
+
+
